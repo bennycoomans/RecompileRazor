@@ -22,8 +22,8 @@ namespace App
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			// Initialize MVC with razor runtime compilation.
 			var builder = services.AddMvc();
-
 			builder.AddRazorRuntimeCompilation(options =>
 			{
 				var libraryPath = Path.GetFullPath(Path.Combine(CurrentEnvironment.ContentRootPath, "..", "Lib"));
